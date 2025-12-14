@@ -33,7 +33,7 @@ touch($path . '/12/test.php');
 $dir = System::find(array($path, '-type', 'f',
                             '-maxdepth', 2,
                             '-name', '*.php'));
-var_dump($dir);
+var_export($dir);
 
 // teardown
 unlink($path . '/test.php');
@@ -55,23 +55,14 @@ rmdir($path);
 
 ?>
 --EXPECTF--
-array(9) {
-  [0]=>
-  string(%s) "%sbug14041/1/test.php"
-  [1]=>
-  string(%s) "%sbug14041/2/test.php"
-  [2]=>
-  string(%s) "%sbug14041/3/test.php"
-  [3]=>
-  string(%s) "%sbug14041/10/test.php"
-  [4]=>
-  string(%s) "%sbug14041/11/test.php"
-  [5]=>
-  string(%s) "%sbug14041/12/test.php"
-  [6]=>
-  string(%s) "%sbug14041/test.php"
-  [7]=>
-  string(%s) "%sbug14041/test4095.php"
-  [8]=>
-  string(%s) "%sbug14041/test14041.php"
-}
+array (
+  0 => '%s/bug14041/1/test.php',
+  1 => '%s/bug14041/2/test.php',
+  2 => '%s/bug14041/3/test.php',
+  3 => '%s/bug14041/10/test.php',
+  4 => '%s/bug14041/11/test.php',
+  5 => '%s/bug14041/12/test.php',
+  6 => '%s/bug14041/test.php',
+  7 => '%s/bug14041/test4095.php',
+  8 => '%s/bug14041/test14041.php',
+)
