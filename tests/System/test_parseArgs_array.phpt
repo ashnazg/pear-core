@@ -12,58 +12,48 @@ if (!getenv('PHP_PEAR_RUNTESTS')) {
 require_once 'System.php';
 
 $opts = System::_parseArgs(array('-t R:\applications\PHP 5.3\tmp', '-d', 'pear'), 't:d');
-var_dump($opts);
+var_export($opts); echo "\n";
 
 $opts = System::_parseArgs(array('-t /tmp/pear install/temp', '-d', 'pear'), 't:d');
-var_dump($opts);
+var_export($opts); echo "\n";
 
 ?>
 --EXPECT--
-array(2) {
-  [0]=>
-  array(2) {
-    [0]=>
-    array(2) {
-      [0]=>
-      string(1) "t"
-      [1]=>
-      string(28) " R:\applications\PHP 5.3\tmp"
-    }
-    [1]=>
-    array(2) {
-      [0]=>
-      string(1) "d"
-      [1]=>
-      NULL
-    }
-  }
-  [1]=>
-  array(1) {
-    [0]=>
-    string(4) "pear"
-  }
-}
-array(2) {
-  [0]=>
-  array(2) {
-    [0]=>
-    array(2) {
-      [0]=>
-      string(1) "t"
-      [1]=>
-      string(23) " /tmp/pear install/temp"
-    }
-    [1]=>
-    array(2) {
-      [0]=>
-      string(1) "d"
-      [1]=>
-      NULL
-    }
-  }
-  [1]=>
-  array(1) {
-    [0]=>
-    string(4) "pear"
-  }
-}
+array (
+  0 => 
+  array (
+    0 => 
+    array (
+      0 => 't',
+      1 => ' R:\\applications\\PHP 5.3\\tmp',
+    ),
+    1 => 
+    array (
+      0 => 'd',
+      1 => NULL,
+    ),
+  ),
+  1 => 
+  array (
+    0 => 'pear',
+  ),
+)
+array (
+  0 => 
+  array (
+    0 => 
+    array (
+      0 => 't',
+      1 => ' /tmp/pear install/temp',
+    ),
+    1 => 
+    array (
+      0 => 'd',
+      1 => NULL,
+    ),
+  ),
+  1 => 
+  array (
+    0 => 'pear',
+  ),
+)
