@@ -13,7 +13,7 @@ hello world
 $fp = fopen('php://stdin', 'r');
 $contents = fread($fp, 8192);
 fclose($fp);
-var_dump(trim($contents));
+var_export(trim($contents));
 ?>
 --EXPECT--
-string(11) "hello world"
+ 'hello world'
