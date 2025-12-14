@@ -93,9 +93,9 @@
   <email>mj@php.net</email>
   <active>no</active>
  </helper>
- <date>2024-11-24</date>
+ <date>2025-12-14</date>
  <version>
-  <release>1.10.16</release>
+  <release>1.10.17</release>
   <api>1.10.1</api>
  </version>
  <stability>
@@ -104,9 +104,11 @@
  </stability>
  <license uri="http://opensource.org/licenses/bsd-license.php">New BSD License</license>
  <notes>
-* PR #141: Fix bug #27796: "Array to string" conversion warnings on installs/other actions
-* PR #145: Never reference E_STRICT on PHP 8.4+
-* PR #147: Fix tests 8.1+
+* PR #152: Fix HTTP chunked encoding handling
+* PR #153: fix composer.json: typo in replace for pear_exception package
+* PR #154: switch to https by default
+* PR #156: Throw new Error instead of E_USER_ERROR on PHP 7.0+
+* PR #159: update tests for https-first behavior
  </notes>
  <contents>
   <dir name="/">
@@ -1380,6 +1382,26 @@ http://pear.php.net/advisory-20110228.txt
 * PR #141: Fix bug #27796: "Array to string" conversion warnings on installs/other actions
 * PR #145: Never reference E_STRICT on PHP 8.4+
 * PR #147: Fix tests 8.1+
+   </notes>
+  </release>
+
+  <release>
+   <date>2025-12-14</date>
+   <version>
+    <release>1.10.17</release>
+    <api>1.10.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://opensource.org/licenses/bsd-license.php">New BSD License</license>
+   <notes>
+* PR #152: Fix HTTP chunked encoding handling
+* PR #153: fix composer.json: typo in replace for pear_exception package
+* PR #154: switch to https by default
+* PR #156: Throw new Error instead of E_USER_ERROR on PHP 7.0+
+* PR #159: update tests for https-first behavior
    </notes>
   </release>
 
