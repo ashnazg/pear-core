@@ -1,5 +1,7 @@
 --TEST--
 PEAR_RunTest Bug #12793
+--INI--
+xdebug.mode = off
 --ARGS--
 --version
 --FILE--

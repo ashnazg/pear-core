@@ -1,5 +1,7 @@
 --TEST--
 PEAR_RunTest Bug #10286 - no output from fatal errors displayed.
+--INI--
+xdebug.mode = off
 --SKIPIF--
 <?php
 if (version_compare(PHP_VERSION, '8.0.0') == -1) {
