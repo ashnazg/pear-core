@@ -1,5 +1,7 @@
 --TEST--
 PEAR_RunTest EXPECTF %S formatter
+--INI--
+xdebug.mode = off
 --FILE--
 <?php
 $oops->method();
