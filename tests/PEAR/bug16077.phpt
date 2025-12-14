@@ -1,5 +1,7 @@
 --TEST--
 Bug #16077: PEAR5::getStaticProperty does not return a reference to the property
+--INI--
+xdebug.mode = off
 --FILE--
 <?php
 require_once 'PEAR.php';
