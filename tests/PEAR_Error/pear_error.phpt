@@ -94,10 +94,10 @@ print "default PEAR_Error: ";
 $err = new PEAR_Error;
 print $err->toString() . "\n";
 print "Testing it: ";
-var_dump(PEAR::isError($err));
+var_export(PEAR::isError($err)); echo "\n";
 print "This is not an error: ";
 $str = "not an error";
-var_dump(PEAR::isError($str));
+var_export(PEAR::isError($str)); echo "\n";
 
 print "Now trying a bunch of variations...\n";
 
@@ -144,8 +144,8 @@ print $err->toString() . "\n";
 --EXPECT--
 specify error class: [foo_error: message="test error" code=0 mode=return level=notice prefix="Foo_Error prefix" info=""]
 default PEAR_Error: [pear_error: message="unknown error" code=0 mode=return level=notice prefix="" info=""]
-Testing it: bool(true)
-This is not an error: bool(false)
+Testing it: true
+This is not an error: false
 Now trying a bunch of variations...
 different message: [pear_error: message="test error" code=0 mode=return level=notice prefix="" info=""]
 different message,code: [pear_error: message="test error" code=-42 mode=return level=notice prefix="" info=""]
