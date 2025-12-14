@@ -1,0 +1,6 @@
+# PHPT runtime files
+**/*.php
+**/*.exp
+**/*.out
+**/*.diff
+**/*.log
